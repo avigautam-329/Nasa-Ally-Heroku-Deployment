@@ -13,7 +13,7 @@ class CorporateSignUp(UserCreationForm):
 
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
-        self.fields['username'].label = 'Display Name'
+        self.fields['username'].label = 'User Name'
         self.fields['email'].label = 'Company Email Address'
 
     def save(self,commit=True):
@@ -35,7 +35,7 @@ class IndividualSignUp(UserCreationForm):
 
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
-        self.fields['username'].label = 'Display Name'
+        self.fields['username'].label = 'User Name'
         self.fields['email'].label = 'Email Address'
 
     @transaction.atomic
